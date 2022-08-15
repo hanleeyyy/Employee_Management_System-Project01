@@ -3,7 +3,6 @@ package com.sripal.Controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.sripal.Entity.Employee;
 import com.sripal.Service.EmployeeService;
 
-@Controller
-public class EmployeeController {
+public class EmployeeController1 {
+	
+	
 	
 	@Autowired
 	private EmployeeService empServ;
@@ -26,7 +26,7 @@ public class EmployeeController {
 	return "Home";
 	}
 	
-	@GetMapping("/lemp")
+	@GetMapping("/list_Emp")
 	public String EmpList(Model model) {
 		model.addAttribute("listEmp", empServ.findAllEmps());
 	return "Empslist";
