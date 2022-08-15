@@ -20,7 +20,7 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeService empServ;
 	
-	@GetMapping("/")
+	@GetMapping("/home")
 	public String Homepage(Model model) {
 	
 	return "Home";
